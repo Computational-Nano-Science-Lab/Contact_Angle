@@ -21,12 +21,11 @@ from math import sqrt, atan, pi
 d=dump("dump3.lammpstrj")
 
 d.map(1,"id",2,"type",3,"x",4,"y",5,"z")
-#d.tselect.all()
-#d.tselect.test("$t >=15800000 and $t <=16200000")
-d.tselect.test("$t >=16920000 and $t <=20000000")
+
+d.tselect.test("$t >=16920000 and $t <=20000000")  # the frames of the lammps Trajectory file
 d.delete()
 d.sort()
-d.aselect.test("$type!=14")
+d.aselect.test("$type!=14") # The atom type of the substrate
 d.write("temp/tmp.lammpstrj")
 d = dump("temp/tmp.lammpstrj",0)
 d.map(1,"id",2,"type",3,"x",4,"y",5,"z")
@@ -59,7 +58,7 @@ while 1:
   z1 = d.vecs(time,"z")
   natom = len(x1)
   minz,maxz = d.minmax("z")
-  zl = minz + 3.35*2   #5  #min(z1) + 20 #+ 3.4    # +3.4*n (added for pillar height, n = height of pillar)
+  zl = minz + 3.35*2   #5  #min(z1) + 20 #+ 3.4    # +3.4*n (added for pillar height, n = height of pillar) # The reference height 
   zu = minz + zbin
   xcom = sum(x1)/natom
   ycom = sum(y1)/natom
