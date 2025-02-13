@@ -18,17 +18,8 @@ import math
 from math import sqrt, atan, pi
 
 
-
-
-#d=dump("/home/ws5/san/250/last-cylindertheta/0.2929/last-files/400/last-dmim-0.2929-x-400/x-dmim/rest-x/rest-x/2/2/final2ns/325-300/restart-350-300/restart2-350-300/restart3/restart4/restart5/300-last-x/300/300-last-last/dump.lammpstrj")
-#d=dump("//home/ws5/san/250/last-cylindertheta/0.2929/last-files/400/last-dmim-0.2929-y-400/final/325-300-2ns/restart-325-300/again-325-300/325-300/last-325-300/300//dump.lammpstrj")
-
-#d=dump("/home/ws5/san/250/last-cylindertheta/0.2929/last-files/400/last-dmim-0.2929-y-400/final/325-300-2ns/restart-325-300/again-325-300/325-300/last-325-300/300/dump.lammpstrj")
-
 d=dump("dump3.lammpstrj")
 
-
-#d = dump("/home/ws5/san/running/continueasusual-sir-ydmim/final/325-300-2ns/restart-325-300/again-325-300/325-300/last-325-300/dump.lammpstrj")
 d.map(1,"id",2,"type",3,"x",4,"y",5,"z")
 #d.tselect.all()
 #d.tselect.test("$t >=15800000 and $t <=16200000")
@@ -289,47 +280,3 @@ plot_all(residu2=True )
 
 p.show()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Visualize
-#plt.figure()
-#plt.plot(r, g_sum/nsnaps, color='black')
-#plt.xlabel('r')
-#plt.ylabel('g(r)')
-#plt.xlim( (0, rMax) )
-#plt.ylim( (0, 1.05 * g_r.max()) )
-#plt.show()
-#plt.clf()
-#plt.subplot(2, 1, 1)
-#plt.plot(xdata, powerlaw(xdata, amp, index))     # Fit
-#plt.errorbar(xdata, ydata, yerr=yerr, fmt='k.')  # Data
-#plt.text(5, 6.5, 'Ampli = %5.2f +/- %5.2f' % (amp, ampErr))
-#plt.text(5, 5.5, 'Index = %5.2f +/- %5.2f' % (index, indexErr))
-#plt.title('Best Fit Power Law')
-#plt.subplot(2, 1, 2)
-#plt.loglog(xdata, powerlaw(xdata, amp, index))
-#plt.errorbar(xdata, ydata, yerr=yerr, fmt='k.')  # Data
